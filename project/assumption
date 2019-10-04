@@ -1,0 +1,56 @@
+for function channel_invite:
+
+if user try to invite a user who already in this channel it will raise ValueError
+if user try to invite itself it will raise ValueError
+if user use a invalid token to invite other it will fail and return AccessError
+if user try to invite a invalid_id to a invalid_channel it will raise ValueError
+if user use invalid token to invite a invalid_id to a invalid_channel it will fail and return AccessError 
+Any member in channel can invite other people
+for function channel_detail:
+if user use invaild_token to show the valid_channel_id it will fail and raise AccessError
+if user use invaild_token to show the invalid_channel_id it will fail and raise AccessError
+for function channel_message:
+if user use invalid_token to show the valid_channel_id and valid_start it will fail and raise AccessError
+if user use invaild_token to show the invalid_channel_id it and valid_start will fail and raise AccessError
+if user use invalid_token to show the valid_channel_id and invalid_start it will fail and raise AccessError
+if user use invaild_token to show the invalid_channel_id and invalid_startit will fail and raise AccessError
+if start is less than 0 it will fail and raise ValueError
+for function channel_leave:
+if user try to leave a channel which he is not a member should raise AccessError
+if user use invaild_token to leave a valid_channel_id it will fail and raise AccessError
+if user use invaild_token to leave a invalid_channel_id it will fail and raise AccessError
+if user is the owner of channel then he leave it and not the owner of channel
+if user is the last one of channel it will make channel empty and wait antherone to join, if is private will delelte
+for function channel_join:
+if user try to join a channel which he is a member should raise ValueError
+if user use invalid_token to join a whether pudlic private valid or invaild channel should raise AccessError 
+for function channel_addowner :
+if user1 try to add user2 (not a member of channel)become owner of channel should NOT work and raises AccessError 
+if user1 try to add itself become owner of channel should not work raise ValueError
+if user2 try to add user1 and user2 become owner of channel which user2 is not the owner,it will fail and raise AccessError
+if any user use invaild_token to do anything it will fail and raise AccessError
+if user try to add any invalid_id become an channel owner it will raise ValueError
+if user try to use invalid_channel_id it will raise ValueError
+if user to admin it can add itself to the channalowner
+#add more maybe?
+for function channel_removeowner :
+if user1 try to remove user2 (not a owner of channel) should not work and raise ValueError
+if user1 try to remove itself should work
+if user1 try to remove user2 from channel_id2  (user1 is not owner of channel )it will fail and raise AccessError
+if any user use invaild_token to do anything it will fail and raise AccessError
+if user try to make any invalid_id become an channel owner it will raise ValueError
+if user try to use invalid_channel_id it will raise ValueError
+if user to admin it can remove itself to the channalowner
+#add more maybe?
+for function channels_list and channels_listall:
+it there is no channel in slack it will return {}
+it will display all channel include private channel
+if any user use invaild_token to do anything it will fail and raise AccessError
+
+for function channel_create:
+if channel_name contain !@#$%^& or ' ' it will raise ValueError
+if any user use invaild_token to do anything it will fail and raise AccessError
+if channel_name have already one with same name it will raise ValueError
+if channel_name have bad word it will raise ValueError
+user who create channel must be the member of channel and the owner of channel
+if channel_name is empty it will raise ValueError
