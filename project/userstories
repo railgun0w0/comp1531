@@ -1,0 +1,11 @@
+As a member of unsw , i want to make every course for student to catch their news.
+As a student, i want to know the teacher'name so that i can call name. # channel_details 
+As a student,I want to invite my friend so that we can talk to each other. # channel_invite
+As a student, i want to know the least news about course and school news so that i wont miss anything important. # channel_message
+As a student，i want to quit the channel that i am not interested so that make software more quiet. # channel_leave
+As a student, i want to catch the news of lecture or course and activies,so that i can get a wonderful plan for everyday #channel_join
+As a teacher, i want to change course admin， so that make everything is least status. # channel_addowner
+As a teacher, i want to change the course Admin	so that make everything under control. #channel_removeowner
+As a student, i want to organize my group, so I can feel more in control. #channel_list
+As a student, i want to know the news of university activies so that i can enjoy the university life #channel_listall 
+As a student, i want to be able to understand my group member progress,so that i can better report our success and failures. #channel_create
